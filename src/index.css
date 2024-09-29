@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body,
+#root{
+  height: 100%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.button-greet {
+  width: 117px;
+  height: 95.14px;
+  gap: 0px;
+  top: 0px;
+left: 0px;
+  border-radius: 0px 64.29px 64.29px 0px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Add transition */
+}
+
+.button-greet-text {
+  display: none;
+  width: 358px;
+  height: 95px;
+  gap: 0px;
+  border-radius: 64.29px 0px 0px 64.29px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add transition */
+}
+
+.button-greet:hover {
+  opacity: 0; /* Fade out .button-greet */
+}
+
+.button-greet:hover + .button-greet-text {
+  display: flex; /* Show .button-greet-text */
+  opacity: 1; /* Fade in .button-greet-text */
+}
+
+
