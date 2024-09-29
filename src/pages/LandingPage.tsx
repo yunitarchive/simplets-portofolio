@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import ProfilelPhoto from "../assets/profile_photo.png";
+import Footer from "../components/Footer";
 
 const LandingPage: FC = () => {
   return (
@@ -17,7 +18,7 @@ const LandingPage: FC = () => {
         <Banner/>
       </section>
 
-   
+      <Footer/>
     </>
   );
 }

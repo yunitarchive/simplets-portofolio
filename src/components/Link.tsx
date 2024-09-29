@@ -34,7 +34,7 @@ const Link: FC <LinkProps> =({katalogLinks, mode,color}) =>{
                     <a
                         key={index}
                         href={link.url}
-                        className={`text-3xl font-light py-3 hover:font-bold ${color}`}
+                        className={`text-2xl font-medium py-1 hover:font-bold ${color}`}
                     >
                         {link.label}
                     </a>

@@ -30,7 +30,7 @@ const Footer: FC = () => {
         Build with 💖 by Brightscout & Ayush 
         </p>
   </div>
-  <div className="flex gap-x-10 mr-10 py-0">
+  <div className="flex gap-x-10 mr-10 py-0 justify-end">
     <div className="my-3 md:mb-0">
         <Link mode="horizontal" color="text-neutral-400" katalogLinks={katalogSocialLinks}/>
     </div>
