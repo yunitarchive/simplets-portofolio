@@ -1,4 +1,4 @@
-import React from 'react';
+import {FC} from "react";
 
 interface InputProps {
   label: string;
@@ -8,7 +8,7 @@ interface InputProps {
 
 }
 
-const CustomInput: React.FC<InputProps> = ({ label, placeholder, type }) => {
+const CustomInput: FC<InputProps> = ({ label, placeholder, type }) => {
   let inputElement;
 
   if (type === "textarea") {
