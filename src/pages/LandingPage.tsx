@@ -1,15 +1,15 @@
-import {FC} from "react";
+import { FC } from "react";
+import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Banner from "../components/Banner";
 
 import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { DUMMY_PROJECTS } from "../constants/projectList";
 
-import ProfilelPhoto from "../assets/profile_photo.png";
 import Avatar1 from "../assets/avatar_1.jfif";
 import Avatar2 from "../assets/avatar_2.jfif";
+import ProfilelPhoto from "../assets/profile_photo.png";
 const descAbout = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ";
 const testimonials = [
   { avatar: Avatar1, 
@@ -39,7 +39,7 @@ const LandingPage: FC = () => {
         <Banner title="Testimonials" description={testimonials}/>
       </section>
 
-      <Footer/>
+      <Footer mode="cover" profilePhoto={ProfilelPhoto}/>
     </>
   );
 }

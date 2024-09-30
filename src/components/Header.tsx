@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Bars3Icon } from '@heroicons/react/24/outline';
 
 // Declare specify type of props that must be passed
 interface HeaderProps {
@@ -52,12 +51,7 @@ const Header: FC<HeaderProps>  = ({ bgColor, profileName ="@Ayush Barnwal" , men
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex lg:hidden">
-          <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black-400">
-            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-          </button>
-        </div>
+      
       </nav>
      
    
