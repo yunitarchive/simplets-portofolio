@@ -1,9 +1,9 @@
 import { FC } from "react";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-
-import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { DUMMY_PROJECTS } from "../constants/projectList";
 
@@ -36,6 +36,7 @@ const LandingPage: FC = () => {
       </section>
       <section id="work" className="relative bg-neutral-400 ">
         <Banner title="Recent Work" elementContent={<Project projects={DUMMY_PROJECTS}/>}/>
+        <Gallery items={DUMMY_PROJECTS}/>
         <Banner title="Testimonials" description={testimonials}/>
       </section>
 

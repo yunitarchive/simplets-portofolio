@@ -26,7 +26,7 @@ const Banner: FC<BannerProps> = ({ title, description, elementContent }) => {
         </div>
         <div className="md:w-1/2 space-y-4">
      
-          {typeof description === 'string' && <p>{description}</p>}
+          {typeof description === 'string' && <p className="text-lg">{description}</p>}
 
           {Array.isArray(description) && (
             <div className="space-y-8">
@@ -34,7 +34,7 @@ const Banner: FC<BannerProps> = ({ title, description, elementContent }) => {
                 <div key={index} className="flex items-start space-x-3 mb-4">
                 
                   <div className="flex-1">
-                    <p className="text-sm text-black-600">{testimonial.text}</p>
+                    <p className="text-lg text-black-600">{testimonial.text}</p>
                     <div className="flex items-center mt-3">
 
                       {testimonial.avatar ? (
