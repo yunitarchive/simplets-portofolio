@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 import Link from "./Link";
 const katalogSocialLinks = [
   {
@@ -24,7 +24,7 @@ const katalogSocialLinks = [
 const Footer: FC = () => {
   return (
   
-<footer className="flex justify-between p-4 px-8   bg-black-400">
+<footer className="flex justify-between p-4 px-8 mb-0   bg-black-400">
   <div className="flex gap-x-10 ml-10 py-0">
          <p className="my-3 text-neutral-400">
         Build with 💖 by Brightscout & Ayush 
