@@ -52,4 +52,29 @@ left: 0px;
   opacity: 1; /* Fade in .button-greet-text */
 }
 
+.button-linkc {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: 85px; 
+  height: 85px; 
+  padding: 0.5rem;
+  gap: 10px; 
+  border-radius: 180px 0px 0px 0px;
+  border: 1px solid #060606; 
+  background-color: transparent; 
+  opacity: 0.8; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.button-linkc:hover {
+  opacity: 1; 
+}
+
+.button-linkc svg {
+  width: 20px; 
+  height: 20px;
+  margin-left: 5px; 
+}
+
 

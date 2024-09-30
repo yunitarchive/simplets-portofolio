@@ -2,9 +2,26 @@ import {FC} from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
-import ProfilelPhoto from "../assets/profile_photo.png";
-import Footer from "../components/Footer";
 
+import Footer from "../components/Footer";
+import Project from "../components/Project";
+import { DUMMY_PROJECTS } from "../constants/projectList";
+
+import ProfilelPhoto from "../assets/profile_photo.png";
+import Avatar1 from "../assets/avatar_1.jfif";
+import Avatar2 from "../assets/avatar_2.jfif";
+const descAbout = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ";
+const testimonials = [
+  { avatar: Avatar1, 
+    name: "Ayush Raj", 
+    role:"VP of Marketing @ Webflow",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. " 
+  },
+  { avatar: Avatar2,
+    role:"Founder @ CopyPossy",
+    name: "Alex Cattoni",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. " },
+]
 const LandingPage: FC = () => {
   return (
     <>
@@ -14,8 +31,12 @@ const LandingPage: FC = () => {
       <Header  bgColor="bg-gray-400" />
       <Hero profilePhoto={ ProfilelPhoto } profileCaption="Webflow Developer - UI/UX Designer"  profileGreet="Hello, I'm Ayush" />
       </section>
-      <section id="about" className="relative">
-        <Banner/>
+      <section id="about" className="relative bg-neutral-400">
+        <Banner title="About" description={descAbout}/>
+      </section>
+      <section id="work" className="relative bg-neutral-400 ">
+        <Banner title="Recent Work" elementContent={<Project projects={DUMMY_PROJECTS}/>}/>
+        <Banner title="Testimonials" description={testimonials}/>
       </section>
 
       <Footer/>
