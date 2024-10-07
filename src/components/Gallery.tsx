@@ -17,8 +17,8 @@ const Gallery: FC<GalleryContainerProps> = ({ items }) => {
   return (
     <div className="space-y-6">
    
-      <div className="w-full overflow-x-auto mx-20">
-        <div className="flex space-x-10">
+      <div className="w-full mx-1">
+        <div className="flex space-x-5">
           {itemsFirst.map((item, index) => (
             <a
               href={item.link}
@@ -33,8 +33,8 @@ const Gallery: FC<GalleryContainerProps> = ({ items }) => {
         </div>
       </div>
 
-      <div className="w-full overflow-x-auto mx-20">
-        <div className="flex space-x-10 snap-x snap-mandatory">
+      <div className="w-full  mx-1">
+        <div className="flex space-x-5">
           {itemsSecond.map((item, index) => (
             <a
               href={item.link}

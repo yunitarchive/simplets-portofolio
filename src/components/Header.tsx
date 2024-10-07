@@ -19,7 +19,8 @@ interface Menu {
 const katalogMenus: Menu[] = [
   { name_menu: "About", path_menu: "#about" },
   { name_menu: "Work", path_menu: "#work" },
-  { name_menu: "Contact", path_menu: "/contact-us" }
+  { name_menu: "Contact", path_menu: "/contact-us" },
+  { name_menu: "Messages", path_menu: "/messages-list" }
 ];
 
 // Declare props as it needs to pass the value of its param
