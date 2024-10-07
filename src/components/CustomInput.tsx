@@ -1,45 +1,45 @@
-import {FC} from "react";
+import { FC } from "react";
 
 interface InputProps {
   label: string;
   placeholder?: string;
-  type?:string;
-  
-
+  type?: string;
+  value: string; 
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; 
 }
 
-const CustomInput: FC<InputProps> = ({ label, placeholder, type }) => {
+const CustomInput: FC<InputProps> = ({ label, placeholder, type, value, onChange }) => {
   let inputElement;
 
   if (type === "textarea") {
     inputElement = (
       <textarea
         placeholder={placeholder}
-        rows={ 4}
-      
+        rows={4}
+        value={value} // bind value
+        onChange={onChange} // attach onChange
         className="w-full px-0 py-2  bg-transparent border-b border-gray-400 focus:border-black focus:outline-none transition-colors"
       />
     );
-  } else if (type === "text")  {
+  } else {
     inputElement = (
       <input
-        type={type}
+        type={type || "text"}
         placeholder={placeholder}
-      
-        className="w-full px-0 py-2   bg-transparent border-b border-gray-400 focus:border-black focus:outline-none transition-colors"
+        value={value} 
+        onChange={onChange} 
+        className="w-full px-0 py-2  bg-transparent border-b border-gray-400 focus:border-black focus:outline-none transition-colors"
       />
     );
   }
-  return (
-    <div className="relative mt-10  lg:mr-20">
-     <label className="absolute -top-6 left-0 text-black-400 text-md ">
-            {label}
-        </label>
-        {inputElement}
-    </div>
-   
 
-    
+  return (
+    <div className="relative mt-10 lg:mr-20">
+      <label className="absolute -top-6 left-0 text-black-400 text-md ">
+        {label}
+      </label>
+      {inputElement}
+    </div>
   );
 };
 
